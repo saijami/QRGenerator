@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" >
+    <head >
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+        <!-- Meta, title, CSS, favicons, etc. -->
+        <meta charset="utf-8" >
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+        <meta name="viewport" content="width=device-width, initial-scale=1" >
+
+        <title >QRCode Generator</title >
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="js/bootstrap/dist/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link href="js/font-awesome/css/font-awesome.min.css" rel="stylesheet" >
+        <!-- NProgress -->
+        <link href="js/nprogress/nprogress.css" rel="stylesheet" >
+
+        <!-- Custom Theme Style -->
+        <link href="css/custom.min.css" rel="stylesheet" >
+    </head >
+
+    <body class="nav-md" >
+        <div class="container body" >
+            <div class="main_container" >
+                <!-- page content -->
+                <div role="main" >
+                    <div class="" >
+                        <div class="clearfix" ></div >
+                        ]                        <div class="row" >
+                        <div class="col-md-12 col-sm-12 col-xs-12" >
+                            <div class="x_panel" >
+                                <div class="x_title" >
+                                    <h2 >QRCode
+                                        <small >Wizard</small >
+                                    </h2 >
+                                    <div class="clearfix" ></div >
+                                </div >
+                                <div class="x_content" >
+                                    <div id="wizard" class="form_wizard wizard_horizontal" >
+                                        <ul class="wizard_steps" >
+                                            <li >
+                                                <a href="#step-1" >
+                                                    <span class="step_no" >1</span >
+                            <span class="step_descr" >
+                                              Step 1<br />
+                                              <small >QR Description</small >
+                                          </span >
+                                                </a >
+                                            </li >
+                                            <li >
+                                                <a href="#step-2" >
+                                                    <span class="step_no" >2</span >
+                                                        <span class="step_descr" >
+                                              Step 2<br />
+                                              <small >Generated QR Code</small >
+                                          </span >
+                                                </a >
+                                            </li >
+
+                                        </ul >
+                                        <div id="step-1" >
+                                            <form class="form-horizontal form-label-left" >
+
+                                                <div class="form-group" >
+                                                    <label class="control-label col-md-3 col-sm-3 col-xs-12"
+                                                           for="city" >City<span
+                                                            class="required" >*</span >
+                                                    </label >
+                                                    <div class="col-md-6 col-sm-6 col-xs-12" >
+                                                        <input type="text" class="form-control" id="city" placeholder="City name"
+                                                               value="" required >
+                                                    </div >
+                                                </div >
+                                                <div class="form-group" >
+                                                    <label class="control-label col-md-3 col-sm-3 col-xs-12"
+                                                           for="state" >State<span
+                                                            class="required" >*</span >
+                                                    </label >
+                                                    <div class="col-md-6 col-sm-6 col-xs-12" >
+                                                        <input type="text" id="state" name="state"
+                                                               required="required" placeholder="State name"
+                                                               class="form-control col-md-7 col-xs-12" >
+                                                    </div >
+                                                </div >
+                                                <div class="form-group" >
+                                                    <label class="control-label col-md-3 col-sm-3 col-xs-12"
+                                                    >&nbsp;</label >
+
+                                                </div >
+                                                <div class="form-group" >
+                                                    <label for="imageId"
+                                                           class="control-label col-md-3 col-sm-3 col-xs-12" >Uplaod
+                                                                                                              Image</label >
+                                                    <div class="col-md-6 col-sm-6 col-xs-12" >
+                                                        <input type="file" class="form-control-file" id="imageId" >
+                                                    </div >
+                                                </div >
+                                                <div class="form-group" >
+                                                    <label class="control-label col-md-3 col-sm-3 col-xs-12"
+                                                    >OR</label >
+
+                                                </div >
+                                                <div class="form-group" >
+                                                    <label class="control-label col-md-3 col-sm-3 col-xs-12"
+                                                           for="latitude" >Latitude<span
+                                                            class="required" >*</span >
+                                                    </label >
+                                                    <div class="col-md-6 col-sm-6 col-xs-12" >
+                                                        <input type="number" id="latitude" name="latitude"
+                                                               required="required" placeholder="latitude"
+                                                               class="form-control col-md-7 col-xs-12" >
+                                                    </div >
+                                                </div >
+                                                <div class="form-group" >
+                                                    <label class="control-label col-md-3 col-sm-3 col-xs-12"
+                                                           for="longitude" >Longitude<span
+                                                            class="required" >*</span >
+                                                    </label >
+                                                    <div class="col-md-6 col-sm-6 col-xs-12" >
+                                                        <input type="number" id="longitude" name="longitude"
+                                                               required="required" placeholder="longitude"
+                                                               class="form-control col-md-7 col-xs-12" >
+                                                    </div >
+                                                </div >
+
+
+                                            </form >
+                                        </div >
+                                        <div id="step-2" style="text-align: center" class="col-lg-6 col-lg-offset-5">
+
+                                            <div class="row" >
+                                                <p id="cardDetails" onclick="window.open('https://www.google.com/maps/search/?api=1&query=' + lat + ',' + long ); return false;">
+                                                </p >
+                                                <div class="col-lg-2">
+                                                    <button type="button" class="btn btn-info" onclick="printElem('cardDetails')">Print</button>
+                                                </div >
+                                            </div >
+                                        </div >
+
+                                    </div >
+                                    <!-- End SmartWizard Content -->
+                                </div >
+                            </div >
+                        </div >
+                    </div >
+                    </div >
+                </div >
+                <!-- /page content -->
+            </div >
+        </div >
+
+        <!-- jQuery -->
+        <script src="js/jquery/dist/jquery.min.js" ></script >
+        <script src="js/bootstrap/dist/js/bootstrap.min.js"></script >
+        <!-- FastClick -->
+        <script src="js/fastclick.js" ></script >
+        <!-- NProgress -->
+        <script src="js/nprogress/nprogress.js" ></script >
+        <!-- jQuery Smart Wizard -->
+        <script src="js/jquery.smartWizard.js" ></script >
+        <!-- Custom Theme Scripts -->
+        <script src="js/custom.min.js" ></script >
+        <script type="text/javascript" src="js/exif.js" ></script >
+        <script type="text/javascript" src="js/qrcode.min.js" ></script >
+        <script >
+            var lat  =  0, long = 0;
+            var qrcodetext = '';
+            document.getElementById("imageId").onchange = function (e) {
+                var file = e.target.files[0];
+                lat  = 0, long = 0;
+                qrcodetext = '';
+                if (file && file.name) {
+                    EXIF.getData(file, function () {
+                        var GPSLatitude = EXIF.getTag(this, "GPSLatitude");
+                        var GPSLongitude = EXIF.getTag(this, "GPSLongitude");
+                        if(GPSLatitude) {
+                            lat = GPSLatitude[0].numerator + GPSLatitude[1].numerator /
+                                    (60 * GPSLatitude[1].denominator) + GPSLatitude[2].numerator / (3600 * GPSLatitude[2].denominator);
+                        }
+                        if(GPSLongitude) {
+                            long = GPSLongitude[0].numerator + GPSLongitude[1].numerator /
+                                    (60 * GPSLongitude[1].denominator) + GPSLongitude[2].numerator / (3600 * GPSLongitude[2].denominator);
+                        }
+                        console.log("https://www.google.com/maps/search/?api=1&query=" + lat + "," + long);
+                        document.getElementById("cardDetails").innerHTML = '';
+
+                    });
+                }
+            }
+            function myFunction() {
+                window.location = 'https://www.google.com/maps/search/?api=1&query=' + lat + "," + long;
+            }
+            function printElem(divId) {
+                var content = document.getElementById(divId).innerHTML;
+                var mywindow = window.open('', 'Print', 'height=600,width=800');
+
+                mywindow.document.write('<html><head><title>Print QR Code</title>');
+                mywindow.document.write('</head><body>');
+                mywindow.document.write(content);
+                mywindow.document.write('</body></html>');
+
+                mywindow.document.close();
+                mywindow.focus();
+                mywindow.print();
+                mywindow.close();
+                return true;
+            }
+        </script >
+    </body >
+</html >
